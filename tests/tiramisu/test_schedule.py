@@ -9,11 +9,11 @@ from tests.utils import benchmark_program_test_sample
 def test_apply_schedule():
     BaseConfig.init()
     test_program = benchmark_program_test_sample()
-
     schedule = Schedule(test_program)
     assert schedule.tree
     schedule.add_optimizations([Parallelization(params=[("comp02", 0)])])
     results = schedule.apply_schedule(nb_exec_tiems=10)
+    print(results)
 
     assert results is not None
     assert len(results) == 10
@@ -132,3 +132,8 @@ def test_from_sched_str():
 
     for idx, optim in enumerate(schedule.optims_list):
         assert optim == new_schedule.optims_list[idx]
+
+
+test_apply_schedule()
+
+

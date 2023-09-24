@@ -239,6 +239,10 @@ class TiramisuProgram:
 
     def __repr__(self) -> str:
         return self.__str__()
+    
+    def set_name(self,name):
+        self.name = name
+        return self.name
 
 
 wrapper_cpp_template = """#include "Halide.h"

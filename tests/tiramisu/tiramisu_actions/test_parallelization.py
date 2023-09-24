@@ -26,7 +26,7 @@ def test_initialize_action_for_tree():
 
 
 def test_set_string_representations():
-    BaseConfig.init()
+    BaseConfig.init()   
     sample = test_utils.benchmark_program_test_sample()
     parallelization = Parallelization([("comp02", 0)])
     schedule = Schedule(sample)
